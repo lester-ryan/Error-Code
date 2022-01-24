@@ -1,0 +1,28 @@
+from datetime import datetime
+import sys
+from time import sleep
+
+
+def start_time():
+    now = datetime.now()
+    with open('/Users/lester/Dropbox/starttime.csv', 'w') as f:
+        sys.stdout = f 
+        current_time = now.strftime("%H:%M:%S %d/%m/%y")
+        print("Time code started =", current_time)
+        sleep(5)
+      
+
+def end_time():
+    now = datetime.now()
+    with open('/Users/lester/Dropbox/endtime.csv', 'w') as f:
+        sys.stdout = f 
+        current_time = now.strftime("%H:%M:%S %d/%m/%y")
+        print("Time code ended =", current_time)
+        
+        
+        
+
+start_time()
+end_time()
+
+
